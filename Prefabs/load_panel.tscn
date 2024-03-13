@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://nhstt1fo4pb0"]
+
+[ext_resource type="Script" path="res://Scripts/Panels/LoadPanel.cs" id="1_8gyqq"]
+[ext_resource type="PackedScene" uid="uid://bip41vl3htp81" path="res://Prefabs/save_data_button.tscn" id="2_dd6uj"]
+[ext_resource type="PackedScene" uid="uid://d2ctuxcjnxjba" path="res://Prefabs/confirm_panel.tscn" id="3_sfh7x"]
+
+[node name="LoadPanel" type="Control" node_paths=PackedStringArray("_grid")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8gyqq")
+_saveDataPrefab = ExtResource("2_dd6uj")
+_grid = NodePath("Panel/GridContainer")
+_confirmPanel = ExtResource("3_sfh7x")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 109.0
+offset_top = 79.0
+offset_right = -109.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Example Load Panel"
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 36.0
+offset_right = 917.0
+offset_bottom = 466.0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3

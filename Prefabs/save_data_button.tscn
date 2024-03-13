@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bip41vl3htp81"]
+
+[ext_resource type="Script" path="res://Scripts/Panels/PlayerSaveModel.cs" id="1_upim3"]
+
+[node name="Button" type="Button" node_paths=PackedStringArray("_saveName", "_saveDescription")]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(274.195, 205.805)
+script = ExtResource("1_upim3")
+_saveName = NodePath("Label")
+_saveDescription = NodePath("Label2")
+
+[node name="Label" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 124.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 30
+text = "Save File Name"
+
+[node name="Label2" type="Label" parent="."]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 52.0
+offset_right = 265.0
+offset_bottom = 197.0
+text = "Save File Description"
