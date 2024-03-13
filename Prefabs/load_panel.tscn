@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bip41vl3htp81" path="res://Prefabs/save_data_button.tscn" id="2_dd6uj"]
 [ext_resource type="PackedScene" uid="uid://d2ctuxcjnxjba" path="res://Prefabs/confirm_panel.tscn" id="3_sfh7x"]
 
-[node name="LoadPanel" type="Control" node_paths=PackedStringArray("_grid")]
+[node name="LoadPanel" type="Control" node_paths=PackedStringArray("_grid", "_closeButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +15,7 @@ script = ExtResource("1_8gyqq")
 _saveDataPrefab = ExtResource("2_dd6uj")
 _grid = NodePath("Panel/GridContainer")
 _confirmPanel = ExtResource("3_sfh7x")
+_closeButton = NodePath("Button")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -43,3 +44,17 @@ offset_bottom = 466.0
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Close"

@@ -9,6 +9,7 @@ public partial class LoadPanel : UIPanel
     [Export] private PackedScene _saveDataPrefab;
     [Export] private GridContainer _grid;
     [Export] private PackedScene _confirmPanel;
+    [Export] private Button _closeButton;
 
     private Control _firstToSelect;
 
@@ -24,6 +25,7 @@ public partial class LoadPanel : UIPanel
             _grid.AddChild(instance);
         }
         EnableCloseWithCancelKey();
+        _closeButton.Pressed += ClosePanel;
     }
 
     protected override void _OnPanelOpen() => 
